@@ -41,7 +41,7 @@ Window {
 
         regularExpression: decimals === 0 ?
                                new RegExp( "\\d{1,3}?$" )
-                             : new RegExp( "(\\d{1,3})([.,]\\d{1," + decimals + "})?$" );
+                             : new RegExp( "(\\d{0,3})([.,]\\d{1," + decimals + "})?$" );
 
 
     }
