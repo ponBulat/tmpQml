@@ -80,8 +80,8 @@ Window {
 
         property int decimals: 1
 
-        regularExpression: decimals === 0 ? /\d{1,3}?$/
-                                          : new RegExp( "(\\d{0,3})([.,]\\d{1," + decimals + "})?$" );
+        regularExpression: decimals === 0 ? /-?\d{1,3}?$/
+                                          : new RegExp( "-?(\\d{0,3})([.,]\\d{1," + decimals + "})?$" );
     }
 
     function setMax( realMax ) {
