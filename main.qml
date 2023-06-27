@@ -12,8 +12,6 @@ Window {
         spacing: 20
 
         TextField {
-            id: field
-
             cursorVisible: true
 
             validator: bulatDoubleValidator
@@ -41,7 +39,7 @@ Window {
 
         property int decimals: 1
 
-        regularExpression: field.decim === 0 ?
+        regularExpression: decimals === 0 ?
                                new RegExp( "\\d{1,3}?$" )
                              : new RegExp( "(\\d{1,3})([.,]\\d{1," + decimals + "})?$" );
 
