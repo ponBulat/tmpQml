@@ -32,7 +32,7 @@ Window {
 
                 const number = parseFloat( text.replace( ',','.' ) )
 
-                text = isNaN(number) ? min : number
+                text = ( isNaN(number) ? min : number ).toFixed( bulatDoubleValidator.decimals )
             }
         }
 
