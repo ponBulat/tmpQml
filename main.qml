@@ -15,10 +15,12 @@ Window {
             id: textField
             cursorVisible: true
 
-            property real max
-            property real min
+            property real max: 10000
+            property real min: 0
 
             validator: bulatDoubleValidator
+
+            text: '0'
 
             onEditingFinished: {
 
@@ -27,6 +29,10 @@ Window {
 
                 if( text > max )
                     text = max
+
+                const number = parseFloat( text.replace( ',','.' ) )
+
+                text = isNaN(number) ? min : number
             }
         }
 
